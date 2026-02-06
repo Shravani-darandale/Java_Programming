@@ -6,7 +6,7 @@ class Checkbit
    { 
         int iMask = 0 , iResult = 0;
 
-        iMask = (1 << 6);
+        iMask = (1 << 6) | (1 << 9);
 
         iResult = iNo & (~iMask);
 
@@ -14,7 +14,7 @@ class Checkbit
    }
 }
 
-class program65_1
+class program65_2
 {
     public static void main(String A[])
     {
@@ -35,8 +35,7 @@ class program65_1
 }
 
 /*
-Enter number :    79
-Modified number : 15
-
-
- */
+Test Cases 
+Enter number :    577
+Modified number :  1
+*/

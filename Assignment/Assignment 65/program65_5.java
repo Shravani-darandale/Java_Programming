@@ -1,20 +1,20 @@
 import java.util.Scanner;
 
-class Checkbit
+class OnBit
 {
-    int BitOff(int iNo)
+    int OnBit(int iNo)
    { 
         int iMask = 0 , iResult = 0;
 
-        iMask = (1 << 6);
+        iMask = 0x0F ;
 
-        iResult = iNo & (~iMask);
+        iResult = iNo | iMask;
 
         return iResult;
    }
 }
 
-class program65_1
+class program65_5
 {
     public static void main(String A[])
     {
@@ -26,17 +26,16 @@ class program65_1
         System.out.println("Enter number : ");
         iNo = sobj.nextInt();
 
-        Checkbit obj = new Checkbit();
+        OnBit obj = new OnBit();
        
-        iRet = obj.BitOff(iNo);
+        iRet = obj.OnBit(iNo);
 
         System.out.println("Modified number : " + iRet);
     }
 }
 
 /*
-Enter number :    79
-Modified number : 15
-
-
- */
+Test Cases 
+Enter number :     73
+Modified number :  79
+*/
