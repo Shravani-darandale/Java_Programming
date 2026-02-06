@@ -6,7 +6,7 @@ class Checkbit
     {
     int iMask = 0 , iResult = 0;
 
-    iMask = 0x0004000;
+    iMask = (1 << 6) | (1 << 7) |(1 << 8);
 
     iResult = iNo & iMask;
 
@@ -21,7 +21,7 @@ class Checkbit
 }
 }
 
-class program64_1
+class program64_4
 {
     public static void main(String A[])
     {
@@ -38,12 +38,22 @@ class program64_1
 
         if(bRet == true)
         {
-            System.out.println("15th bit is NO");
+            System.out.println("7th,8th and 9th bits are ON");
 
         }
         else
         {
-            System.out.println("15TH bit is OFF");
+            System.out.println("7th,8th and 9th bits are OFF");
         }
     }
 }
+
+/*
+Test Cases
+1)448            ON
+2)64             OFF
+3)128            OFF
+4)256            OFF
+5)192            OFF
+
+ */

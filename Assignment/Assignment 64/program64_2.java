@@ -6,7 +6,7 @@ class Checkbit
     {
     int iMask = 0 , iResult = 0;
 
-    iMask = 0x0004000;
+    iMask = (1 << 4) | (1 << 17);
 
     iResult = iNo & iMask;
 
@@ -21,7 +21,7 @@ class Checkbit
 }
 }
 
-class program64_1
+class program64_2
 {
     public static void main(String A[])
     {
@@ -38,12 +38,12 @@ class program64_1
 
         if(bRet == true)
         {
-            System.out.println("15th bit is NO");
+            System.out.println("5th and 18th bit is ON");
 
         }
         else
         {
-            System.out.println("15TH bit is OFF");
+            System.out.println("5th and 18th bit is OFF");
         }
     }
 }
